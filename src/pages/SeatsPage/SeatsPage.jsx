@@ -193,7 +193,7 @@ const FormContainer = styled.div`
         letter-spacing: 0.04em;
         margin-top: 3px;
         color: #FFFFFF;
-        border: none
+        border: none;
 
         background: #E8833A;
         border-radius: 3px;
