@@ -47,11 +47,11 @@ export default function SessionsPage(props) {
                     <SessionContainer>
                     {`${day.weekday} - ${day.date}`}
                     
-                    <ButtonsContainer>
+                    <ButtonsContainer data-test="movie-day">
         
                         {day.showtimes.map(horarios => ( 
                     <Link to={`/assentos/${horarios.id}`} key={horarios.id} >
-                    <button>{horarios.name}</button>
+                    <button data-test="showtime">{horarios.name}</button>
                     </Link>
                     
                 )
@@ -69,7 +69,7 @@ export default function SessionsPage(props) {
 
 
 
-            <FooterContainer>
+            <FooterContainer data-test="footer">
                 <div>
                     <img src={sessao.posterURL} alt="poster" />
                 </div>

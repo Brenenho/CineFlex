@@ -91,7 +91,7 @@ export default function SeatsPage(props) {
 
                 {sessao.seats.map(assentos => (
 
-                    <SeatItem isAvailable={assentos.isAvailable} isSelected={assentosSelecionados.includes(assentos)} key={assentos.name} onClick={() => handleAssentoClick(assentos)}>{assentos.name}</SeatItem>
+                    <SeatItem data-test="seat" isAvailable={assentos.isAvailable} isSelected={assentosSelecionados.includes(assentos)} key={assentos.name} onClick={() => handleAssentoClick(assentos)}>{assentos.name}</SeatItem>
 
                 )
                 )}
@@ -115,6 +115,7 @@ export default function SeatsPage(props) {
                 <FormContainer>
                     Nome do Comprador:
                     <input
+                        data-test="client-name"
                         placeholder="Digite seu nome..."
                         required
                         type="text"
@@ -124,6 +125,7 @@ export default function SeatsPage(props) {
 
                     CPF do Comprador:
                     <input
+                        data-test="client-cpf"
                         placeholder="Digite seu CPF..."
                         required
                         type="text"
@@ -131,11 +133,11 @@ export default function SeatsPage(props) {
                         onChange={(e) => setCpf(e.target.value)}
                     />
 
-                    <button type="submit" disabled={assentosSelecionados.length > 0 ? false : true} >Reservar Assento(s)</button>
+                    <button data-test="book-seat-btn" type="submit" disabled={assentosSelecionados.length > 0 ? false : true} >Reservar Assento(s)</button>
 
                 </FormContainer>
             </form>
-            <FooterContainer>
+            <FooterContainer data-test="footer">
                 <div>
                     <img src={movie.posterURL} alt="poster" />
                 </div>
@@ -193,7 +195,7 @@ const FormContainer = styled.div`
         letter-spacing: 0.04em;
         margin-top: 3px;
         color: #FFFFFF;
-        border: none
+        border: none;
 
         background: #E8833A;
         border-radius: 3px;

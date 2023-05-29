@@ -30,13 +30,13 @@ export default function SuccessPage(props) {
         <PageContainer>
             <h1>Pedido feito <br /> com sucesso!</h1>
 
-            <TextContainer>
+            <TextContainer data-test="movie-info">
                 <strong><p>Filme e sessão</p></strong>
                 <p>{movie.title}</p>
                 <p>{`${sessao.day.date} - ${sessao.name}`}</p>
             </TextContainer>
 
-            <TextContainer>
+            <TextContainer data-test="seats-info">
                 <strong><p>Ingressos</p></strong>
 
 
@@ -49,13 +49,13 @@ export default function SuccessPage(props) {
 
             </TextContainer>
 
-            <TextContainer>
+            <TextContainer data-test="client-info">
                 <strong><p>Comprador</p></strong>
                 <p>{`Nome: ${nome}`}</p>
                 <p>{`CPF: ${cpf}`}</p>
             </TextContainer>
 
-            <button onClick={voltar} >Voltar para Home</button>
+            <button data-test="go-home-btn" onClick={voltar} >Voltar para Home</button>
         </PageContainer>
     )
 }
