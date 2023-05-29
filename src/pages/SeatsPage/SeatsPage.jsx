@@ -199,6 +199,10 @@ const FormContainer = styled.div`
 
         background: #E8833A;
         border-radius: 3px;
+        &:disabled {
+			background-color: lightgray;
+		}
+        
     }
     input {
         width: calc(100vw - 60px);

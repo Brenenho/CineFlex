@@ -112,7 +112,7 @@ const PageContainer = styled.div`
     }
 
     p {
-        line-height: 0px
+        
     }
 `
 const TextContainer = styled.div`
@@ -127,6 +127,6 @@ const TextContainer = styled.div`
     }
 
     p {
-        margin: 15px
+        margin: 5px
     }
 `
