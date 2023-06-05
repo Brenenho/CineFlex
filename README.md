@@ -5,7 +5,7 @@ O projeto Cineflex é um aplicativo de reserva de assentos para cinemas desenvol
 ## Tecnologias utilizadas
 
 - ReactJS
-- CSS
+- Styled-Components
 - API privada
 
 ## Funcionalidades
